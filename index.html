@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              purple: "#883AE1",
+              lavender: "#E6D6FC",
+              lightgray: "#E5EAF0",
+              offwhite: "#FAFAF9",
+              white: "#FFFFFF",
+              darkblue: "#111729",
+              grayblue: "#677489",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+            fontSize: {
+              title: "1.5rem",
+              body: "1rem",
+              "small-text": "1rem",
+              tag: "0.625rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-offwhite flex items-center justify-center h-screen">
+    <div id="card" class="w-[380px] rounded-xl overflow-hidden shadow-lg">
+        <div id="card-hero" class="relative">
+            <img class="w-full" src="./hero-image-business-card.png" alt="Business Image" />
+            
+            <!-- Overlay SVG -->
+            <div class="absolute bottom-0 left-0 w-full h-full">
+              <svg width="100%" height="100%" viewBox="0 0 130 100" preserveAspectRatio="none">
+                <!-- This path starts at the top left, curves down and then back up to the top right, filling the area above the curve -->
+                <path d="M0,87 q52,25 79,1 q52,-53 80,2 " fill="white"></path>
+              </svg>
+            </div>
+          </div>
+          
+
+      <div id="card-content" class="px-8 py-6 bg-white">
+        <div
+          class="font-poppins text-title font-medium font-darkblue mb-2 tracking-tighter"
+        >
+          Perfect solution for small business
+        </div>
+
+        <p class="text-grayblue text-body tracking-tighter">
+          Small businesses need to generate leads to grow. You can use tools
+          like Ringy.
+        </p>
+      </div>
+      <div id="separator" class="h-[0.5px] border-t border-lightgray"></div>
+      <div id="card-footer" class="px-8 py-6">
+        <div class="flex items-center">
+          <div class="rounded-full flex-shrink-0 p-1 bg-lightgray">
+            <img
+              class="h-10 w-10 rounded-full"
+              src="./avatar-image-business-card.png"
+              alt="Amy Burgess"
+            />
+          </div>
+          <div class="ml-3">
+            <p
+              class="font-poppins font-darkblue text-small-text font-semibold tracking-tighter"
+            >
+              Amy Burgess
+            </p>
+            <p
+              class="font-lato text-xs tracking-tight font-medium text-grayblue"
+            >
+              Customer Manager, Solution Oy
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
